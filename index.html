@@ -184,7 +184,7 @@
                             <span class="text-slate-300 group-hover:text-rose-500 transition"><i class="fa-solid fa-check-double text-lg"></i></span>
                         </div>
                         <h4 class="font-bold text-slate-900 group-hover:text-rose-600 transition mb-2">고쳐쓰기</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">오탈자 교정, 문맥 흐름 점검, 독자의 호기심을 유도하는 제목으로 제목을 고칩니다.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed">오탈자 교정, 문맥 흐름 점검, 독자의 호기심을 유도하는 제목으로 제목 고치기를 합니다.</p>
                     </div>
                     <div class="mt-4 pt-3 border-t border-slate-100 flex items-center text-xs font-semibold text-rose-600">
                         수정 전후 대비 분석 <i class="fa-solid fa-arrow-right ml-1 group-hover:translate-x-1 transition-transform"></i>
@@ -334,16 +334,6 @@
                         <p class="text-xs text-slate-500">비상교육 중학 국어 1-1 단원 학습 진단 평가</p>
                     </div>
                 </div>
-                
-                <!-- Tab Controls -->
-                <div class="flex bg-slate-100 p-1 rounded-xl w-full md:w-auto">
-                    <button id="tab-btn-quiz" onclick="switchQuizTab('quiz')" class="flex-1 md:flex-initial px-4 py-2 text-sm font-bold rounded-lg transition duration-200 bg-white text-slate-900 shadow">
-                        쪽지 시험 (3문항)
-                    </button>
-                    <button id="tab-btn-evaluate" onclick="switchQuizTab('evaluate')" class="flex-1 md:flex-initial px-4 py-2 text-sm font-bold rounded-lg transition duration-200 text-slate-500 hover:text-slate-800">
-                        소단원 평가 (10문항)
-                    </button>
-                </div>
             </div>
 
             <!-- 학업 인적 사항 등록 영역 -->
@@ -403,66 +393,8 @@
                     </div>
                 </div>
 
-                <!-- TAB 1: 쪽지 시험 (3문항) -->
-                <div id="tab-content-quiz" class="space-y-6">
-                    <!-- Q1 -->
-                    <div class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <div class="flex items-start space-x-2">
-                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded font-bold mt-1">질문 1</span>
-                            <h4 class="font-bold text-slate-800">정보를 전달하는 설명문을 쓸 때에는 개인의 감정을 가미하여 주관적이고 화려하게 표현하는 것이 좋다?</h4>
-                        </div>
-                        <div class="flex space-x-4 pl-8">
-                            <button onclick="checkOXAnswer(1, 'O')" class="flex items-center justify-center space-x-2 bg-white border border-slate-300 hover:bg-slate-100 font-bold px-6 py-2.5 rounded-lg w-28 transition">
-                                <i class="fa-regular fa-circle text-emerald-500 mr-1 text-lg"></i> O (그렇다)
-                            </button>
-                            <button onclick="checkOXAnswer(1, 'X')" class="flex items-center justify-center space-x-2 bg-white border border-slate-300 hover:bg-slate-100 font-bold px-6 py-2.5 rounded-lg w-28 transition">
-                                <i class="fa-solid fa-xmark text-rose-500 mr-1 text-lg"></i> X (아니다)
-                            </button>
-                        </div>
-                        <p id="feedback-ox-1" class="hidden text-sm font-semibold pl-8 mt-2"></p>
-                    </div>
-
-                    <!-- Q2 -->
-                    <div class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <div class="flex items-start space-x-2">
-                            <span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-0.5 rounded font-bold mt-1">질문 2</span>
-                            <h4 class="font-bold text-slate-800">서연이가 너비아니에 대한 인지도 조사 결과를 글의 첫 머리에 도표로 배치하여 보여 준 핵심 까닭은 무엇인가요?</h4>
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-8">
-                            <button onclick="checkMultiAnswer(2, 'A')" class="text-left bg-white border border-slate-300 hover:bg-slate-100 p-3 rounded-lg text-sm transition">
-                                ① 너비아니 요리 방법을 시각적으로 더 쉽게 알려주기 위해
-                            </button>
-                            <button onclick="checkMultiAnswer(2, 'B')" class="text-left bg-white border border-slate-300 hover:bg-slate-100 p-3 rounded-lg text-sm transition">
-                                ② 전통 음식을 잘 모른다는 사실을 보여줘 글의 필요성을 부각하기 위해
-                            </button>
-                            <button onclick="checkMultiAnswer(2, 'C')" class="text-left bg-white border border-slate-300 hover:bg-slate-100 p-3 rounded-lg text-sm transition">
-                                ③ 역사 기록 속에서 전통 음식이 어떻게 변했는지 나타내기 위해
-                            </button>
-                            <button onclick="checkMultiAnswer(2, 'D')" class="text-left bg-white border border-slate-300 hover:bg-slate-100 p-3 rounded-lg text-sm transition">
-                                ④ 수집한 설문 데이터가 많으므로 빠짐없이 모두 자랑하기 위해
-                            </button>
-                        </div>
-                        <p id="feedback-multi-2" class="hidden text-sm font-semibold pl-8 mt-2"></p>
-                    </div>
-
-                    <!-- Q3 -->
-                    <div class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <div class="flex items-start space-x-2">
-                            <span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-0.5 rounded font-bold mt-1">질문 3</span>
-                            <h4 class="font-bold text-slate-800">글쓰기 과정 중, 초고를 완성한 뒤 오탈자를 점검하고 독자의 호기심을 유발하도록 제목을 수정하는 마지막 단계의 이름은 무엇인가요?</h4>
-                        </div>
-                        <div class="flex items-center space-x-3 pl-8">
-                            <input type="text" id="short-answer-3" placeholder="네 글자로 입력하세요 (예: 계획하기)" class="flex-1 max-w-sm bg-white border border-slate-300 rounded-lg p-2.5 text-sm focus:border-amber-500 focus:outline-none">
-                            <button onclick="checkShortAnswer(3, '고쳐쓰기')" class="bg-teal-600 hover:bg-teal-700 text-white font-bold px-4 py-2.5 rounded-lg text-sm transition">
-                                확인
-                            </button>
-                        </div>
-                        <p id="feedback-short-3" class="hidden text-sm font-semibold pl-8 mt-2"></p>
-                    </div>
-                </div>
-
-                <!-- TAB 2: 소단원 평가 (10문항) -->
-                <div id="tab-content-evaluate" class="hidden space-y-6">
+                <!-- TAB 2: 소단원 평가 (10문항) - 쪽지시험 제거 후 단독 표시 -->
+                <div id="tab-content-evaluate" class="space-y-6">
                     <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-sm text-blue-800 mb-6 flex items-start gap-3">
                         <i class="fa-solid fa-circle-info mt-0.5 text-blue-600"></i>
                         <div>
@@ -1301,26 +1233,6 @@
             }
         }
 
-        // Tab Switcher for Exam Center
-        function switchQuizTab(tab) {
-            const quizBtn = document.getElementById('tab-btn-quiz');
-            const evalBtn = document.getElementById('tab-btn-evaluate');
-            const quizContent = document.getElementById('tab-content-quiz');
-            const evalContent = document.getElementById('tab-content-evaluate');
-
-            if (tab === 'quiz') {
-                quizBtn.className = "flex-1 md:flex-initial px-4 py-2 text-sm font-bold rounded-lg transition duration-200 bg-white text-slate-900 shadow";
-                evalBtn.className = "flex-1 md:flex-initial px-4 py-2 text-sm font-bold rounded-lg transition duration-200 text-slate-500 hover:text-slate-800";
-                quizContent.classList.remove('hidden');
-                evalContent.classList.add('hidden');
-            } else {
-                evalBtn.className = "flex-1 md:flex-initial px-4 py-2 text-sm font-bold rounded-lg transition duration-200 bg-white text-slate-900 shadow";
-                quizBtn.className = "flex-1 md:flex-initial px-4 py-2 text-sm font-bold rounded-lg transition duration-200 text-slate-500 hover:text-slate-800";
-                evalContent.classList.remove('hidden');
-                quizContent.classList.add('hidden');
-            }
-        }
-
         // Student Info & Unlock Evaluation
         let isEvaluatonUnlocked = false;
         
@@ -1362,57 +1274,6 @@
             
             if(wrapper) wrapper.classList.remove('pointer-events-none', 'opacity-40');
             if(overlay) overlay.classList.add('hidden');
-        }
-
-        // Quiz Checkers (Tab 1)
-        function checkOXAnswer(qNum, answer) {
-            if(!isEvaluatonUnlocked) {
-                alert("위에서 학적 정보를 입력하고 평가를 활성화해 주세요.");
-                return;
-            }
-            const feedback = document.getElementById(`feedback-ox-${qNum}`);
-            if(!feedback) return;
-            feedback.classList.remove('hidden');
-            if (answer === 'X') {
-                feedback.innerHTML = '<span class="text-emerald-600"><i class="fa-solid fa-check mr-1"></i> 정답입니다!</span>';
-            } else {
-                feedback.innerHTML = '<span class="text-rose-600"><i class="fa-solid fa-xmark mr-1"></i> 오답입니다. 다시 한번 생각해 보세요.</span>';
-            }
-        }
-
-        function checkMultiAnswer(qNum, answer) {
-            if(!isEvaluatonUnlocked) {
-                alert("위에서 학적 정보를 입력하고 평가를 활성화해 주세요.");
-                return;
-            }
-            const feedback = document.getElementById(`feedback-multi-${qNum}`);
-            if(!feedback) return;
-            feedback.classList.remove('hidden');
-            if (answer === 'B') {
-                feedback.innerHTML = '<span class="text-emerald-600"><i class="fa-solid fa-check mr-1"></i> 정답입니다!</span>';
-            } else {
-                feedback.innerHTML = '<span class="text-rose-600"><i class="fa-solid fa-xmark mr-1"></i> 오답입니다. 다시 한번 생각해 보세요.</span>';
-            }
-        }
-
-        function checkShortAnswer(qNum, correctAnswer) {
-            if(!isEvaluatonUnlocked) {
-                alert("위에서 학적 정보를 입력하고 평가를 활성화해 주세요.");
-                return;
-            }
-            const inputElement = document.getElementById(`short-answer-${qNum}`);
-            const feedback = document.getElementById(`feedback-short-${qNum}`);
-            if(!inputElement || !feedback) return;
-
-            const inputVal = inputElement.value.trim();
-            feedback.classList.remove('hidden');
-            
-            // Remove spaces for loose matching
-            if (inputVal.replace(/\s/g, '') === correctAnswer) {
-                feedback.innerHTML = '<span class="text-emerald-600"><i class="fa-solid fa-check mr-1"></i> 정답입니다!</span>';
-            } else {
-                feedback.innerHTML = '<span class="text-rose-600"><i class="fa-solid fa-xmark mr-1"></i> 오답입니다. 다시 한번 생각해 보세요.</span>';
-            }
         }
 
         // Submit Evaluation Form (Tab 2)
@@ -1465,14 +1326,6 @@
                 if (isNaN(calculatedScore)) calculatedScore = 0;
 
                 // 3. 전송용 데이터 (저장해둔 sessionStudentInfo 사용)
-                const payloadData = {
-                    grade: sessionStudentInfo.grade,
-                    sClass: sessionStudentInfo.sClass,
-                    sNum: sessionStudentInfo.sNum,
-                    name: sessionStudentInfo.name,
-                    score: calculatedScore
-                };
-
                 // 4. 로딩 UI 표시
                 feedbackDiv.classList.remove('hidden');
                 feedbackDiv.innerHTML = '<div class="p-4 text-slate-600 font-bold"><i class="fa-solid fa-spinner fa-spin mr-2"></i> 채점 및 결과를 서버로 전송 중입니다...</div>';
@@ -1499,29 +1352,29 @@
                     `;
                 };
 
-                // 7. 서버 통신 (Fetch - CORS 우회 방식 적용)
+                // 7. 서버 통신 (Fetch - FormData 방식 적용)
                 if (typeof SCRIPT_URL !== 'undefined' && SCRIPT_URL.trim() !== "") {
-                    // 구글 앱스 스크립트 doPost로 안전하게 보내기 위한 URL 파라미터 변환
-                    const formData = new URLSearchParams();
-                    for (const key in payloadData) {
-                        formData.append(key, payloadData[key]);
-                    }
+                    const formData = new FormData();
+                    formData.append('grade', sessionStudentInfo.grade);
+                    formData.append('sClass', sessionStudentInfo.sClass);
+                    formData.append('sNum', sessionStudentInfo.sNum);
+                    formData.append('name', sessionStudentInfo.name);
+                    formData.append('score', calculatedScore);
 
                     fetch(SCRIPT_URL, {
                         method: 'POST',
-                        mode: 'no-cors', // CORS 차단 완전 회피
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded'
-                        },
                         body: formData
+                        // 주의: headers를 수동으로 설정하지 마세요. FormData가 자동으로 multipart/form-data와 boundary를 설정합니다.
                     })
-                    .then(() => {
-                        // no-cors는 성공 응답 본문을 읽을 수 없으므로 무조건 성공으로 간주
+                    .then(res => res.text())
+                    .then(text => {
                         renderResultUI(true);
                     })
                     .catch(err => {
                         console.error("네트워크 에러:", err);
-                        renderResultUI(false);
+                        // 간혹 브라우저 정책으로 에러가 콘솔에 찍히지만 실제 데이터는 구글 시트에 들어가는 경우가 있습니다.
+                        // 성공 여부 피드백 렌더링
+                        renderResultUI(false); 
                     });
                 } else {
                     // 스크립트 URL이 비어있을 경우 (단순 화면 테스트용)
